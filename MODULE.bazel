@@ -13,12 +13,6 @@ bazel_dep(name = "platforms", version = "1.1.0")
 # For the JsInfo provider.
 bazel_dep(name = "aspect_rules_js", version = "3.0.1")
 
-# Telemetry
-bazel_dep(name = "aspect_tools_telemetry", version = "0.5.2")
-
-tel = use_extension("@aspect_tools_telemetry//:extension.bzl", "telemetry")
-use_repo(tel, "aspect_tools_telemetry_report")
-
 # Prebuilt transpiler binaries, built from the isolated module in
 # transpiler/ and published to GitHub releases. Platform selection
 # happens in //oxc/private:transpiler.
